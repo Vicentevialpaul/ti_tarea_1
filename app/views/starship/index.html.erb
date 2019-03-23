@@ -1,0 +1,165 @@
+<h1>STAR WAR STARSHIP</h1>
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Name: </th>
+       	<th><%= @informacion["name"] %></th>
+ 		
+
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Model: </th>
+       	<th><%= @informacion["model"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Manufacturer: </th>
+       	<th><%= @informacion["manufacturer"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Cost in credits: </th>
+       	<th><%= @informacion["cost_in_credits"] %></th>
+       </tr>
+    </thead>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Length: </th>
+       	<th><%= @informacion["length"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>max_atmosphering_speed: </th>
+       	<th><%= @informacion["max_atmosphering_speed"] %></th>
+       </tr>
+    </thead>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Crew: </th>
+       	<th><%= @informacion["crew"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Passengers: </th>
+       	<th><%= @informacion["passengers"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Cargo capacity: </th>
+       	<th><%= @informacion["cargo_capacity"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Consumables: </th>
+       	<th><%= @informacion["consumables"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Hyperdrive rating: </th>
+       	<th><%= @informacion["hyperdrive_rating"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Mglt: </th>
+       	<th><%= @informacion["MGLT"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>starship_class: </th>
+       	<th><%= @informacion["starship_class"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Films: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @films.each do |film| %>
+       	<td> </td>
+       	<td><%= link_to film["title"], pelicula_path(:informacion=> film ), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Created: </th>
+       	<th><%= @informacion["created"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Edited: </th>
+       	<th><%= @informacion["edited"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Url: </th>
+       	<th><%= @informacion["url"] %></th>
+       </tr>
+    </thead>
+</table>

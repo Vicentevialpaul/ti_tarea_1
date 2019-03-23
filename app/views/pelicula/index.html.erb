@@ -1,0 +1,106 @@
+<h1>STAR WARS</h1>
+	
+
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Título: </th>
+       	<th><%= @title %></th>
+ 		
+
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Episodio: </th>
+       	<th><%= @episode %></th>
+  
+
+       </tr>
+    </thead>
+</table>
+<table>
+    <thead>
+       <tr>	
+       	<th>Descripción: </th>
+       	<th><%= @description %></th>
+       </tr>
+    </thead>
+</table>
+<table>
+    <thead>
+       <tr>
+       	<th>Director: </th>
+       	<th><%= @director%></th>
+
+
+       </tr>
+    </thead>
+</table>
+<table>
+    <thead>
+       <tr>
+       	<th>Productor: </th>
+       	<th><%= @producer%></th>
+
+       </tr>
+    </thead>
+</table>
+<table>
+    <thead>
+       <tr>
+       	<th>Año: </th>
+       	<th><%= @año %></th>
+
+
+       </tr>
+    </thead>
+</table>
+<table>
+    <thead>
+       <tr>
+       	<th>Characters: </th>
+       	<th>  </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @characters.each do |character| %>
+       	<td> </td>
+       	<td><%= link_to character["name"], character_path(:content=> character ), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
+<table>
+    <thead>
+       <tr>
+       	<th>Planetas: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @planets.each do |planet| %>
+       	<td> </td>
+       	<td><%= link_to planet["name"], planet_path(:content=> planet, :hola=>@character), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
+<table>
+    <thead>
+       <tr>
+       	<th>Starships: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @starships.each do |starship| %>
+       	<td> </td>
+       	<td><%= link_to starship["name"], starship_path(:content=> starship ), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>

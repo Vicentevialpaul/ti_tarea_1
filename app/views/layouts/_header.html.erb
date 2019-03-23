@@ -1,0 +1,16 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+<nav>
+	<h1>STAR WARS </h1>
+	<h1> </h1>
+          <%= form_tag({:controller => "welcome", :action => "search"},:method => :get) do %>
+              <div align="center">
+              <div class = "busqueda_label">
+              Ingrese Búsqueda
+              </div>
+              <%= text_field_tag "searchbox", params[:searchbox] , class: ""%>
+              <%= submit_tag "Buscar", :name => nil, class: "boton_busqueda" %>
+              </div>
+            <% end %>
+     <h1> </h1>
+</nav>
+</header>

@@ -1,0 +1,142 @@
+<h1>STAR WARS PLANET</h1>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Name: </th>
+ 		
+
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Rotation period: </th>
+       	<th><%= @informacion["rotation_period"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Orbital period: </th>
+       	<th><%= @informacion["orbital_period"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Diameter: </th>
+       	<th><%= @informacion["diameter"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Climate: </th>
+       	<th><%= @informacion["climate"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Gravity: </th>
+       	<th><%= @informacion["gravity"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Terrain: </th>
+       	<th><%= @informacion["terrain"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>SUrface water: </th>
+       	<th><%= @informacion["surface_water"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Population: </th>
+       	<th><%= @informacion["population"] %></th>
+       </tr>
+    </thead>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Films: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @films.each do |film| %>
+       	<td> </td>
+       	<td><%= link_to film["title"], pelicula_path(:informacion=> film), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Residents: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @residentes.each do |residente| %>
+       	<td> </td>
+       	<td><%= link_to residente["name"], character_path(:content=> residente ), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Created: </th>
+       	<th><%= @informacion["created"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Edited: </th>
+       	<th><%= @informacion["edited"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Url: </th>
+       	<th><%= @informacion["url"] %></th>
+       </tr>
+    </thead>
+</table>

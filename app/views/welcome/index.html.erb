@@ -1,0 +1,38 @@
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th> </th>
+        <th> Año </th>
+        <th> </th>
+        <th> Director </th>
+        <th> </th>
+        <th> Productor(es)</th>
+        <th> </th>
+        <th> Número de episodio </th>
+
+        <th colspan="10"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+		<%  @response["results"].each do |persona| %>
+       	<td><%= link_to persona["title"], pelicula_path(:informacion=> persona ), class: "btn btn-primary" %></td>
+       	<td> | </td>
+        <td><%= persona["release_date"] %></td>
+        <td> | </td>
+        <td><%= persona["director"] %></td>
+        <td> | </td>
+        <td><%= persona["producer"] %></td>
+        <td> | </td>
+        <td><%= persona["episode_id"] %></td>
+
+ 
+
+
+
+    	 </tr>
+         <% end %>
+    </tbody>
+  </table>

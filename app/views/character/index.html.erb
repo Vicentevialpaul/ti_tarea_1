@@ -1,0 +1,124 @@
+<h1>STAR WAR CHARACTER</h1>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Birth day: </th>
+       	<th><%= @informacion["birth_year"] %></th>
+ 		
+
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Created: </th>
+       	<th><%= @informacion["created"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Edited: </th>
+       	<th><%= @informacion["edited"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Eye color: </th>
+       	<th><%= @informacion["eye_color"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Gender: </th>
+       	<th><%= @informacion["gender"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Hair color: </th>
+       	<th><%= @informacion["hair_color"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Height: </th>
+       	<th><%= @informacion["height"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Mass: </th>
+       	<th><%= @informacion["mass"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Name: </th>
+       	<th><%= @informacion["name"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Skin color: </th>
+       	<th><%= @informacion["skin_color"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Films: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @films.each do |film| %>
+       	<td> </td>
+       	<td><%= link_to film["title"], pelicula_path(:informacion=> film ), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Species: </th>
+       </tr>
+    </thead>
+    <tbody>
+		<%  @starships.each do |film| %>
+       	<td> </td>
+       	<td><%= link_to film["name"], starship_path(:content=> film ), class: "btn btn-primary" %></td>
+    	 </tr>
+         <% end %>
+    </tbody>
+</table>
