@@ -13,7 +13,7 @@ gem 'rails', '~> 5.1.5'
 group :development do 
    gem 'sqlite3', '~> 1.3', '< 1.4'    #gem to use in development environment
 end
-gem 'pg'
+gem 'pg',    '0.15.1'
 
 #group :production do 
 #  gem 'pg',    '0.15.1'     #gem to use in production environment
