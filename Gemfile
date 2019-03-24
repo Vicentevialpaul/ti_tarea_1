@@ -16,13 +16,11 @@ group :development do
    gem 'sqlite3', '~> 1.3', '< 1.4'    #gem to use in development environment
 end
 group :production do 
-  gem 'pg', '~> 0.20'   #gem to use in production environment
+  gem 'pg', '~> 0.15.1'   #gem to use in production environment
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
