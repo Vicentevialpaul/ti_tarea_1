@@ -13,11 +13,11 @@ gem 'rails', '~> 5.1.5'
 group :development do 
    gem 'sqlite3', '~> 1.3', '< 1.4'    #gem to use in development environment
 end
-gem 'pg',    '0.15.1' 
+gem 'pg'
 
-group :production do 
-  gem 'pg',    '0.15.1'     #gem to use in production environment
-end
+#group :production do 
+#  gem 'pg',    '0.15.1'     #gem to use in production environment
+#end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
