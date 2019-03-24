@@ -17,7 +17,8 @@ end
 group :production do 
   gem 'pg',    '0.15.1'     #gem to use in production environment
 end
-
+# Use Puma as the app server
+gem 'puma', '~> 3.7'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
