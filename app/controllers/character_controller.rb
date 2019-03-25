@@ -6,14 +6,17 @@ class CharacterController < ApplicationController
   	url_c = JSON.parse(url_c.body)
   	@films = []
   	@lista = @informacion["films"]
+  if @starship != nil
 	url_c["results"].each do |c| 
 		if @lista.include? c["url"]
 			@films.push(c)
 	    end
     end
+  end
 
 	@starship = @informacion["starships"]
     @starships = []   
+    if @starship != nil
         diccionario = []
         url = 'https://swapi.co/api/starships/?page=1'
         while url != nil do
@@ -24,11 +27,10 @@ class CharacterController < ApplicationController
             url = personas["next"]
         end
         url_c = diccionario
-    if @starship != nil
       url_c.each do |c| 
       	if @starship.include? c["url"]
       		@starships.push(c)
-          end	
+        end	
       end
     else
       @starships = []
