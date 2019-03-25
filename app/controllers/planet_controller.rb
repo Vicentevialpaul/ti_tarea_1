@@ -7,10 +7,12 @@ class PlanetController < ApplicationController
   	url_c = JSON.parse(url_c.body)
   	@films = []
   	@lista = @informacion["films"]
+  if @lista != nil
 	url_c["results"].each do |c| 
 		if @lista.include? c["url"]
 			@films.push(c)
 	    end
+  end
     end
 
 	@residente = @informacion["residents"]
