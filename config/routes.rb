@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'pelicula/index'
   get    '/search',     to: 'welcome#search'
   root 'welcome#index'
+  get '/welcome', to: 'welcome#index' 
   get '/pelicula', to: 'pelicula#index'
   get '/character', to: 'character#index'
   get '/planet', to: 'planet#index'

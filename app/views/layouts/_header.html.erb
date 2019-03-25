@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 <nav>
-	<h1>STAR WARS </h1>
+        <td><%= link_to "STARWARS", welcome_path, class: "btn btn-primary" %></td>
 	<h1> </h1>
           <%= form_tag({:controller => "welcome", :action => "search"},:method => :get) do %>
               <div align="center">
