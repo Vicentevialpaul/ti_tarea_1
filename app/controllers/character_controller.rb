@@ -1,5 +1,6 @@
 class CharacterController < ApplicationController
   def index
+    self.params = params.permit!
   	@informacion = params[:content]
   	url_c = HTTParty.get('https://swapi.co/api/films/')
   	url_c = JSON.parse(url_c.body)
@@ -23,11 +24,19 @@ class CharacterController < ApplicationController
             url = personas["next"]
         end
         url_c = diccionario
-    url_c.each do |c| 
-    	if @starship.include? c["url"]
-    		@starships.push(c)
-        end	
+    if @starship != nil
+      url_c.each do |c| 
+      	if @starship.include? c["url"]
+      		@starships.push(c)
+          end	
+      end
+    else
+      @starships = []
     end
+
+  planeta = HTTParty.get(@informacion["homeworld"])
+  planeta = JSON.parse(planeta.body)
+  @planets = planeta
 
 
 

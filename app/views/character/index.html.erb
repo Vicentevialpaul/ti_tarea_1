@@ -1,9 +1,19 @@
 <h1>STAR WAR CHARACTER</h1>
 
+
 <table>
     <thead>
        <tr>
-       	<th>Birth day: </th>
+        <th>Name: </th>
+        <th><%= @informacion["name"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+       	<th>Birth year: </th>
        	<th><%= @informacion["birth_year"] %></th>
  		
 
@@ -11,23 +21,6 @@
     </thead>
 </table>
 
-<table>
-    <thead>
-       <tr>
-       	<th>Created: </th>
-       	<th><%= @informacion["created"] %></th>
-       </tr>
-    </thead>
-</table>
-
-<table>
-    <thead>
-       <tr>
-       	<th>Edited: </th>
-       	<th><%= @informacion["edited"] %></th>
-       </tr>
-    </thead>
-</table>
 
 <table>
     <thead>
@@ -111,7 +104,19 @@
 <table>
     <thead>
        <tr>
-       	<th>Species: </th>
+        <th>Homeworld:  </th>
+        <th><%=  link_to @planets["name"], planet_path(:content=> @planets), class: "btn btn-primary" %></th>
+       </tr>
+    </thead>
+</table>
+
+
+
+
+<table>
+    <thead>
+       <tr>
+       	<th>Starships: </th>
        </tr>
     </thead>
     <tbody>
@@ -121,4 +126,23 @@
     	 </tr>
          <% end %>
     </tbody>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
+        <th>Created: </th>
+        <th><%= @informacion["created"] %></th>
+       </tr>
+    </thead>
+</table>
+
+<table>
+    <thead>
+       <tr>
+        <th>Edited: </th>
+        <th><%= @informacion["edited"] %></th>
+       </tr>
+    </thead>
 </table>

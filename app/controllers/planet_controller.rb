@@ -35,7 +35,11 @@ class PlanetController < ApplicationController
 	else
 		@residentes = []
 	end
-	   
+
+
+
+
+
   end
 
 end

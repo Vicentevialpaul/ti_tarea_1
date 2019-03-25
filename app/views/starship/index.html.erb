@@ -140,6 +140,22 @@
 <table>
     <thead>
        <tr>
+        <th>Pilots: </th>
+       </tr>
+    </thead>
+    <tbody>
+    <%  @pilots.each do |pilot| %>
+        <td> </td>
+        <td><%= link_to pilot["name"], character_path(:content=> pilot ), class: "btn btn-primary" %></td>
+       </tr>
+         <% end %>
+    </tbody>
+</table>
+
+
+<table>
+    <thead>
+       <tr>
        	<th>Created: </th>
        	<th><%= @informacion["created"] %></th>
        </tr>

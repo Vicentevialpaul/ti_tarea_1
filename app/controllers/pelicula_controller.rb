@@ -15,6 +15,7 @@ class PeliculaController < ApplicationController
 	@producer = @urls["producer"]
 	@año = @urls["release_date"]
 	@character = @urls["characters"]
+    @informacion = @urls
 
 
     @characters = []   
